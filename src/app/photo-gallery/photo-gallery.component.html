@@ -1,4 +1,4 @@
-<div class="card-columns">
+<div class="card-columns" *ngIf="flickerResponse$ | async as flickerResponse">
     <div class="card" *ngFor="let item of flickerResponse?.items">
       <img class="card-img-top" [src]="item.media.m" [alt]="item.title" />
       <div class="card-body">
